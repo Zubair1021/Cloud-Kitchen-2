@@ -6,22 +6,29 @@ import Footer from './components/layout/Footer';
 import Chatbot from './components/home/Chatbot';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
+import MenuPage from './pages/MenuPage';
+import AboutPage from './pages/AboutPage';
 import RegisterPage from './pages/RegisterPage';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
+import { div } from 'framer-motion/client';
 
 function App() {
   return (
+    
     <AuthProvider>
       <CartProvider>
         <Router>
-          <div className="flex flex-col min-h-screen relative">
+          <div className="flex flex-col min-h-screen relative ">
             <Navbar />
             <main className="flex-grow">
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
+                <Route path="/menu" element={<MenuPage />}/>
+                <Route path="/about" element={<AboutPage />} />
+                
                 {/* Add more routes as needed */}
               </Routes>
             </main>

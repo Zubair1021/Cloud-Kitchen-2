@@ -9,7 +9,7 @@ const RegisterPage: React.FC = () => {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="flex justify-center">
           <Link to="/" className="flex items-center">
-            <ChefHat className="h-10 w-10 text-primary-600" />
+            <ChefHat className="h-10 w-10 text-orange-600" />
             <span className="ml-2 text-2xl font-display font-bold text-gray-900">Cloud Kitchen</span>
           </Link>
         </div>

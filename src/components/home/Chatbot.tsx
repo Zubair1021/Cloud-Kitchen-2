@@ -153,7 +153,7 @@ const Chatbot = () => {
   <AnimatePresence>
     <motion.button
       onClick={() => setIsOpen(true)}
-      className={`fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg transition-all duration-500 ease-in-out group bg-primary-400 hover:bg-primary-600 text-white`}
+      className={`fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg transition-all duration-500 ease-in-out group bg-orange-500 hover:bg-orange-600 text-white`}
       
       aria-label="Open chat"
       initial={{ scale: 0.8, opacity: 0 }}
@@ -198,7 +198,7 @@ const Chatbot = () => {
         transition={{ duration: 0.2 }}
       >
         {/* Chat header */}
-        <div className="bg-primary-500 text-white p-4 flex justify-between items-center">
+        <div className="bg-orange-500 text-white p-4 flex justify-between items-center">
           <div className="flex items-center">
             <Bot className="h-6 w-6 mr-2" />
             <h3 className="font-semibold">Cloud Kitchen Assistant</h3>
@@ -224,12 +224,12 @@ const Chatbot = () => {
             >
               <div className={`max-w-[80%] rounded-lg p-3 ${
                 message.sender === 'user'
-                  ? 'bg-primary-400 text-white rounded-tr-none'
+                  ? 'bg-orange-400 text-white rounded-tr-none'
                   : 'bg-white dark:bg-gray-700 text-gray-800 dark:text-white shadow-sm rounded-tl-none'
               }`}>
                 <div className="flex items-center mb-1">
                   {message.sender === 'bot' ? (
-                    <Bot className="h-4 w-4 mr-1 text-primary-400 dark:text-primary-400" />
+                    <Bot className="h-4 w-4 mr-1 text-orange-400 dark:text-orange-400" />
                   ) : (
                     <User className="h-4 w-4 mr-1 text-white" />
                   )}
@@ -253,7 +253,7 @@ const Chatbot = () => {
               >
                 <div className="bg-white dark:bg-gray-700 rounded-lg p-3 shadow-sm">
                   <div className="flex items-center">
-                    <Loader2 className="h-4 w-4 mr-2 text-primary-400 animate-spin" />
+                    <Loader2 className="h-4 w-4 mr-2 text-orange-400 animate-spin" />
                     <span className="text-sm text-gray-500 dark:text-gray-400">Assistant is typing...</span>
                   </div>
                 </div>
@@ -291,7 +291,7 @@ const Chatbot = () => {
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder="Type your message..."
-              className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary-400 dark:bg-gray-700 dark:text-white transition-colors"
+              className="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-orange-400 dark:bg-gray-700 dark:text-white transition-colors"
             />
             <motion.button
               onClick={handleSendMessage}
@@ -300,7 +300,7 @@ const Chatbot = () => {
               className={`px-4 py-2 rounded-r-lg flex items-center justify-center ${
                 inputValue.trim() === ''
                   ? 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed'
-                  : 'bg-primary-400 hover:bg-primary-500 hover:bg-primary-600 text-white'
+                  : 'bg-orange-400 hover:bg-orange-500 hover:bg-orange-600 text-white'
               } transition-colors`}
             >
               <Send className="h-5 w-5" />
