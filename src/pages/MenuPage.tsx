@@ -141,11 +141,11 @@ const MenuPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20">
+    <div className="min-h-screen bg-white-50 dark:bg-white-900 pt-20">
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Menu</h1>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <h1 className="text-3xl md:text-4xl font-bold text-orange-500 dark:text-orange mb-4">Our Menu</h1>
+          <p className="text-white-600 dark:text-white-300 max-w-2xl mx-auto">
             Explore our diverse selection of gourmet dishes prepared by our expert chefs using only the freshest ingredients.
           </p>
         </div>
@@ -155,20 +155,20 @@ const MenuPage = () => {
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <div className="relative w-full md:w-auto flex-1 max-w-md">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Search className="h-5 w-5 text-gray-400" />
+                <Search className="h-5 w-5 text-white-400" />
               </div>
               <input
                 type="text"
                 placeholder="Search our menu..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-orange-500 focus:border-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                className="pl-10 w-full px-4 py-2 border border-white-300 dark:border-orange-400 rounded-lg focus:ring-orange-500 focus:border-orange-500 bg-white dark:bg-white-800 text-white-900 dark:text-white"
               />
             </div>
             
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-white-800 border border-white-300 dark:border-orange-400 rounded-lg text-white-700 dark:text-white-200 hover:bg-white-50 dark:hover:bg-white-700 transition-colors"
             >
               <Filter className="h-5 w-5" />
               Filters
@@ -183,7 +183,7 @@ const MenuPage = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="py-4">
-              <h3 className="text-lg font-medium text-gray-800 dark:text-white mb-3">Categories</h3>
+              <h3 className="text-lg font-medium text-white-800 dark:text-white mb-3">Categories</h3>
               <div className="flex flex-wrap gap-2">
                 {categories.map((category, index) => (
                   <button
@@ -191,7 +191,7 @@ const MenuPage = () => {
                     className={`px-4 py-2 rounded-full transition-all duration-300 ${
                       activeCategory === category
                         ? 'bg-orange-500 text-white'
-                        : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600'
+                        : 'bg-white dark:bg-white-800 text-white-700 dark:text-white-200 hover:bg-white-100 dark:hover:bg-white-700 border border-white-300 dark:border-white-600'
                     }`}
                     onClick={() => setActiveCategory(category)}
                   >
@@ -209,7 +209,7 @@ const MenuPage = () => {
             {filteredItems.map((item) => (
               <motion.div
                 key={item.id}
-                className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700"
+                className="bg-white dark:bg-white-800 rounded-xl overflow-hidden shadow-lg border border-white-100 dark:border-white-700"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
@@ -229,17 +229,17 @@ const MenuPage = () => {
                 </div>
                 <div className="p-4">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{item.name}</h3>
+                    <h3 className="text-lg font-semibold text-white-800 dark:text-white">{item.name}</h3>
                     <span className="text-orange-500 font-bold">${item.price.toFixed(2)}</span>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{item.description}</p>
+                  <p className="text-white-600 dark:text-white-300 text-sm mb-4">{item.description}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full">
+                    <span className="text-xs font-medium px-2 py-1 bg-white-100 dark:bg-white-700 text-white-600 dark:text-white-300 rounded-full">
                       {item.category}
                     </span>
                     <button 
                       onClick={() => handleAddToCart(item)}
-                      className="bg-gray-800 dark:bg-gray-700 hover:bg-orange-500 dark:hover:bg-orange-500 text-white py-2 px-4 rounded-lg transition-colors duration-300 flex items-center"
+                      className="bg-white-800 dark:bg-white-700 hover:bg-orange-500 hover:text-white dark:hover:bg-orange-500 text-black-200 py-2 px-4 rounded-lg transition-colors duration-300 flex items-center border border-gray-400 hover:border-none"
                     >
                       <ShoppingBag className="h-4 w-4 mr-2" />
                       Add to Cart
@@ -251,7 +251,7 @@ const MenuPage = () => {
           </div>
         ) : (
           <div className="text-center py-12">
-            <p className="text-gray-600 dark:text-gray-400 text-lg">No items found matching your criteria.</p>
+            <p className="text-white-600 dark:text-white-400 text-lg">No items found matching your criteria.</p>
             <button 
               onClick={() => {
                 setActiveCategory('All');

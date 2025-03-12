@@ -8,10 +8,11 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import MenuPage from './pages/MenuPage';
 import AboutPage from './pages/AboutPage';
+import ChefRegisterPage from './pages/ChefRegisterPage'
 import RegisterPage from './pages/RegisterPage';
 import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
-import { div } from 'framer-motion/client';
+// import { div } from 'framer-motion/client';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/menu" element={<MenuPage />}/>
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/chef-register" element={<ChefRegisterPage />} />
+                
                 
                 {/* Add more routes as needed */}
               </Routes>

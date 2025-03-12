@@ -57,9 +57,6 @@ const Navbar: React.FC = () => {
             <Link to="/menu" className="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md">
               Menu
             </Link>
-            <Link to="/chefs" className="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md">
-              Chefs
-            </Link>
             <Link to="/about" className="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md">
               About
             </Link>
@@ -112,13 +109,13 @@ const Navbar: React.FC = () => {
             ) : (
               <>
                 <Link to="/login">
-                  <Button variant="outline" size="sm">
+                  <Button variant="outline" size="sm" className='hover:bg-orange-500 hover:text-white hover:border-white border border-gray-500'>
                     Log in
                   </Button>
                 </Link>
-                <Link to="/register">
-                  <Button size="sm">Sign up</Button>
-                </Link>
+                <Link to="/chef-register">
+               <Button size="sm" variant="secondary">Register your Kitchen</Button>
+               </Link>
               </>
             )}
           </div>
@@ -137,7 +134,7 @@ const Navbar: React.FC = () => {
             )}
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-orange-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-orange-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-500"
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? (
@@ -168,13 +165,6 @@ const Navbar: React.FC = () => {
             Menu
           </Link>
           <Link
-            to="/chefs"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-gray-50"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Chefs
-          </Link>
-          <Link
             to="/about"
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-gray-50"
             onClick={() => setIsMenuOpen(false)}
@@ -188,7 +178,7 @@ const Navbar: React.FC = () => {
             <div className="flex items-center px-5">
               <div className="flex-shrink-0">
                 <div className="h-10 w-10 rounded-full bg-primary-100 flex items-center justify-center">
-                  <span className="text-primary-800 font-medium">
+                  <span className="text-orange-500 font-medium">
                     {user?.name.charAt(0)}
                   </span>
                 </div>
@@ -229,16 +219,16 @@ const Navbar: React.FC = () => {
               className="block w-full"
               onClick={() => setIsMenuOpen(false)}
             >
-              <Button variant="outline" fullWidth>
+              <Button variant="outline" fullWidth className='border border-gray-500'>
                 Log in
               </Button>
             </Link>
             <Link
-              to="/register"
+              to="/"
               className="block w-full"
               onClick={() => setIsMenuOpen(false)}
             >
-              <Button fullWidth>Sign up</Button>
+              <Button fullWidth>Register your Kitchen</Button>
             </Link>
           </div>
         )}
