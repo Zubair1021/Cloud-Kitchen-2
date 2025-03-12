@@ -90,7 +90,7 @@ const LoginForm: React.FC = () => {
               id="remember-me"
               name="remember-me"
               type="checkbox"
-              className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+              className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
             />
             <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700">
               Remember me
@@ -98,7 +98,7 @@ const LoginForm: React.FC = () => {
           </div>
           
           <div className="text-sm">
-            <Link to="/forgot-password" className="font-medium text-primary-600 hover:text-primary-500">
+            <Link to="/forgot-password" className="font-medium text-orange-600 hover:text-orange-500">
               Forgot your password?
             </Link>
           </div>
@@ -114,7 +114,7 @@ const LoginForm: React.FC = () => {
       <div className="mt-8 text-center">
         <p className="text-sm text-gray-600">
           Don't have an account?{' '}
-          <Link to="/register" className="font-medium text-primary-600 hover:text-primary-500">
+          <Link to="/register" className="font-medium text-orange-600 hover:text-orange-500">
             Sign up
           </Link>
         </p>

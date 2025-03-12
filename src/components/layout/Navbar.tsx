@@ -224,7 +224,7 @@ const Navbar: React.FC = () => {
               </Button>
             </Link>
             <Link
-              to="/"
+              to="/chef-register"
               className="block w-full"
               onClick={() => setIsMenuOpen(false)}
             >

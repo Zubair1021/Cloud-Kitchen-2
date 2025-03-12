@@ -72,7 +72,7 @@ const RegisterForm: React.FC = () => {
             type="button"
             className={`py-3 px-4 border rounded-md flex items-center justify-center ${
               selectedRole === 'customer'
-                ? 'bg-primary-50 border-primary-500 text-primary-700'
+                ? 'bg-orange-50 border-orange-500 text-orange-700'
                 : 'border-gray-300 text-gray-700 hover:bg-gray-50'
             }`}
             onClick={() => setSelectedRole('customer')}
@@ -80,11 +80,11 @@ const RegisterForm: React.FC = () => {
             <User className="h-5 w-5 mr-2" />
             Customer
           </button>
-          <button
+          {/* <button
             type="button"
             className={`py-3 px-4 border rounded-md flex items-center justify-center ${
               selectedRole === 'chef'
-                ? 'bg-primary-50 border-primary-500 text-primary-700'
+                ? 'bg-orange-50 border-orange-500 text-orange-700'
                 : 'border-gray-300 text-gray-700 hover:bg-gray-50'
             }`}
             onClick={() => setSelectedRole('chef')}
@@ -94,12 +94,12 @@ const RegisterForm: React.FC = () => {
               <line x1="6" y1="17" x2="18" y2="17"></line>
             </svg>
             Chef
-          </button>
+          </button> */}
           <button
             type="button"
             className={`py-3 px-4 border rounded-md flex items-center justify-center ${
               selectedRole === 'rider'
-                ? 'bg-primary-50 border-primary-500 text-primary-700'
+                ? 'bg-orange-50 border-orange-500 text-orange-700'
                 : 'border-gray-300 text-gray-700 hover:bg-gray-50'
             }`}
             onClick={() => setSelectedRole('rider')}
@@ -193,16 +193,16 @@ const RegisterForm: React.FC = () => {
             id="terms"
             name="terms"
             type="checkbox"
-            className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+            className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
             required
           />
           <label htmlFor="terms" className="ml-2 block text-sm text-gray-700">
             I agree to the{' '}
-            <Link to="/terms" className="text-primary-600 hover:text-primary-500">
+            <Link to="/terms" className="text-orange-600 hover:text-orange-500">
               Terms of Service
             </Link>{' '}
             and{' '}
-            <Link to="/privacy" className="text-primary-600 hover:text-primary-500">
+            <Link to="/privacy" className="text-orange-600 hover:text-orange-500">
               Privacy Policy
             </Link>
           </label>
@@ -218,7 +218,7 @@ const RegisterForm: React.FC = () => {
       <div className="mt-8 text-center">
         <p className="text-sm text-gray-600">
           Already have an account?{' '}
-          <Link to="/login" className="font-medium text-primary-600 hover:text-primary-500">
+          <Link to="/login" className="font-medium text-orange-600 hover:text-orange-500">
             Sign in
           </Link>
         </p>
